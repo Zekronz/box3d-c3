@@ -1032,10 +1032,10 @@ struct WorldDef {
 extern fn WorldDef defaultWorldDef() @cname("b3DefaultWorldDef");
 
 constdef BodyType {
-	STATIC_BODY = 0,
-	KINEMATIC_BODY = 1,
-	DYNAMIC_BODY = 2,
-	BODY_TYPE_COUNT
+	STATIC = 0,
+	KINEMATIC = 1,
+	DYNAMIC = 2,
+	COUNT
 }
 
 struct MotionLocks {
@@ -1091,13 +1091,13 @@ struct SurfaceMaterial {
 extern fn SurfaceMaterial defaultSurfaceMaterial() @cname("b3DefaultSurfaceMaterial");
 
 constdef ShapeType {
-	CAPSULE_SHAPE,
-	COMPOUND_SHAPE,
-	HEIGHT_SHAPE,
-	HULL_SHAPE,
-	MESH_SHAPE,
-	SHPERE_SHAPE,
-	SHAPE_TYPE_COUNT
+	CAPSULE,
+	COMPOUND,
+	HEIGHT,
+	HULL,
+	MESH,
+	SHPERE,
+	COUNT
 }
 
 struct ShapeDef {
@@ -1172,15 +1172,15 @@ struct Counters {
 }
 
 constdef JointType {
-	PARALLEL_JOINT,
-	DISTANCE_JOINT,
-	FILTER_JOINT,
-	MOTOR_JOINT,
-	PRISMATIC_JOINT,
-	REVOLUTE_JOINT,
-	SPERICAL_JOINT,
-	WELD_JOINT,
-	WHEEL_JOINT,
+	PARALLEL,
+	DISTANCE,
+	FILTER,
+	MOTOR,
+	PRISMATIC,
+	REVOLUTE,
+	SPERICAL,
+	WELD,
+	WHEEL,
 }
 
 struct JointDef {
@@ -1978,15 +1978,15 @@ constdef SeparatingFeature {
 }
 
 constdef TriangleFeature {
-	FEATURE_NODE = 0,
-	FEATURE_TRIANGLE_FACE,
-	FEATURE_HULL_FACE,
-	FEATURE_EDGE_1,
-	FEATURE_EDGE_2,
-	FEATURE_EDGE_3,
-	FEATURE_VERTEX_1,
-	FEATURE_VERTEX_2,
-	FEATURE_VERTEX_3,
+	NODE = 0,
+	TRIANGLE_FACE,
+	HULL_FACE,
+	EDGE_1,
+	EDGE_2,
+	EDGE_3,
+	VERTEX_1,
+	VERTEX_2,
+	VERTEX_3,
 }
 
 struct SATCache {
