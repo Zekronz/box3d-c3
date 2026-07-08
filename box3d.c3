@@ -943,7 +943,7 @@ extern fn float getLengthUnitsPerMeter() @cname("b3GetLengthUnitsPerMeter");
 extern fn void setStallThreshold(float seconds) @cname("b3SetStallThreshold");
 extern fn float getStallThreshold() @cname("b3GetStallThreshold");
 
-macro _huge(){
+macro huge(){
 	$if $feature(BOX3D_DOUBLE_PRECISION):
 		return (1.0e9f * GetLengthUnitsPerMeter());
 	$else
@@ -956,12 +956,12 @@ const MAX_TASKS = 256;
 const GRAPH_COLOR_COUNT = 24;
 const CONTACT_MANIFOLD_COUNT_BUCKETS = 8;
 
-macro _linear_slop(){ return (0.005f * GetLengthUnitsPerMeter()); }
-macro _min_capsule_length(){ return _linear_slop(); }
-macro _overlap_slop(){ return (0.1f * _linear_slop()); }
-macro _speculative_distance(){ return (4.0f * _linear_slop()); }
-macro _mesh_rest_offset(){ return (1.0f * _linear_slop()); }
-macro _contact_recycle_distance(){ return (10.0f * _linear_slop()); }
+macro linear_slop(){ return (0.005f * GetLengthUnitsPerMeter()); }
+macro min_capsule_length(){ return linear_slop(); }
+macro overlap_slop(){ return (0.1f * linear_slop()); }
+macro speculative_distance(){ return (4.0f * linear_slop()); }
+macro mesh_rest_offset(){ return (1.0f * linear_slop()); }
+macro contact_recycle_distance(){ return (10.0f * linear_slop()); }
 
 const MAX_WORLDS = 128;
 const MAX_ROTATION = (0.25f * PI);
