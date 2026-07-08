@@ -967,7 +967,7 @@ const MAX_WORLDS = 128;
 const MAX_ROTATION = (0.25f * PI);
 const CONTACT_RECYCLE_ANGULAR_DISTANCE = 0.99240388f;
 
-macro _max_aabb_margin(){
+macro max_aabb_margin(){
 	return (0.05f * GetLengthUnitsPerMeter());
 }
 
